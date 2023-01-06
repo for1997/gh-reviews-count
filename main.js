@@ -10,7 +10,7 @@ async function main() {
   const owner = core.getInput('owner');
   const repo = core.getInput('repo');
   const token = core.getInput('github-token', { required: true });
-  const pull_number = core.getInput('pull_number');
+  const pull_number = core.getInput('pull-number');
 
   const MyOctokit = Octokit.plugin(paginateRest);
   const octokit = new MyOctokit({ auth: 'token ' + token });
